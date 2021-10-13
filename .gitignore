@@ -9,3 +9,5 @@ __pycache__/
 # Terraform
 .terraform/
 terraform.tfvars
+.terraform.lock.hcl
+terraform.tfstate*
