@@ -1,0 +1,28 @@
+---
+docker_install: true
+
+docker_version: "latest"
+
+docker_bash_completion_install: true
+
+# Docker daemon configuration
+docker_daemon_config: {}
+
+docker_service_enabled: true
+
+docker_service_state: "started"
+
+# A list of users who will be added to the docker group
+docker_users: []
+
+# Docker SDK for Python
+docker_sdk_for_python_install: false
+
+docker_sdk_for_python_version: "latest"
+
+# Docker Compose
+docker_compose_install: false
+
+docker_compose_version: "latest"
+
+docker_compose_bash_completion_install: true

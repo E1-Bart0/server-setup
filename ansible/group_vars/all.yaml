@@ -1,0 +1,2 @@
+users: ["ansible"]
+ssh_key_file: "~/.ssh/terraform_keys/terraform.pub"

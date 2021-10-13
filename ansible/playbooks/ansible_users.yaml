@@ -1,0 +1,24 @@
+- hosts: all
+
+  tasks:
+    - name: "Ensure that Ansible account exists"
+      user:
+        name: "{{ item }}"
+        groups: ["admin", "sudo"]
+        shell: /bin/bash
+      loop: "{{ users }}"
+      tags: create_user_acount
+
+    - name: "Allow sudo users use sudo without passwords"
+      lineinfile:
+        dest: "/etc/sudoers"
+        state: "present"
+        regexp: "^%sudo"
+        line: "%sudo ALL=(ALL:ALL) NOPASSWD:ALL"
+
+    - name: "Create authorized_key home/ansible/.ssh/authorized_key"
+      authorized_key:
+        user: "{{ item }}"
+        state: "present"
+        key: "{{ lookup('file', ssh_key_file) }}"
+      loop: "{{ users }}"
