@@ -1,6 +1,6 @@
-# How to quickly Set Up a new VPC
+# How to quickly Set Up a new VPS
 
-## Create a new VPC
+## Create a new VPS
 
 ### Using Digital Ocean
 
