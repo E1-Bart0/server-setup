@@ -38,7 +38,7 @@ resource "digitalocean_droplet" "web" {
   count    = 1
   # С найденной Убунтой
   image    = data.digitalocean_images.ubuntu.images[0].slug
-  name     = "nginx-${count.index}"
+  name     = "web-${count.index}"
   region   = "fra1"
   size     = "s-1vcpu-1gb"
   ssh_keys = [digitalocean_ssh_key.default.fingerprint]
